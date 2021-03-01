@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* Import ROBOTO regular and bold */
+
+
+/* ADDED FEATURES TO BE APPROVED */
+
+    /* 
+        1. shadows on buttons
+        2. nav links uppercase
+        3. animated underline links
+        4. card shadow
+        5. animated shadow -->show on scroll
+    */
+
+    /* html, body{
+        margin: 0;
+        padding: 0;
+       
+    }
+
+
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+:root{
+    
+    --pinky: #FF9898;
+        --shadowPinky: #A69898;
+    --myGrey: #F4F4F4;
+    --myOrange: #FFB800;
+    --sand: #ECE6B6;
+        --shadowSand: #C9C6AD;
+    --pistacchio: #BCDBD1;
+        --shadowPistacchio: #A1B4AE;
+    --myBlack: #282828;
+    --greyFont: #7e7e7e;
+    
+}
+
+
+p, a, li{
+    font-family: 'Roboto', sans-serif; 
+}
+
+
+a{
+    font-size: 14px;    
+    
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1.25px;
+}
+
+h1,
+h2,
+h3{
+    font-weight: bold;
+}
+
+h1{
+    font-size: 38px;
+}
+
+h3{
+    font-size: 24px;
+}
+
+p{  
+ 
+    line-height: 1.8rem;
+}
+
+.card p{
+    font-size: 14px;
+}
+
+.btn-go a{
+    font-size: 16px;
+}
+
+.form-title{
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1.25px;
+    color: white;
+}
+
+
+
+
+header{
+    margin-top: 25px;
+}
+
+.logo{
+    
+    margin: auto;
+}
+
+
+.navbar{
+    height: 40px;
+    
+}
+
+
+
+
+.navbar ul{
+    list-style-type: none;
+}
+
+    .navbar li{
+        max-height: 100%;
+        padding: 0 20px;
+        margin: auto;
+        position: relative;
+    }
+
+    .navbar a{
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    .nav-item a:hover{
+        color: black;
+    }
+
+    .nav-item a::after{
+        background: none repeat scroll 0 0 transparent;
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 50%;
+        
+        position: relative;
+        background: var(--pinky);
+        transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        width: 0;
+    }
+
+        .nav-item a:hover:after { 
+        width: 100%;
+        left: 0; 
+      }
+
+
+.main__content-left,
+.about-app-content,
+.register-content{
+    max-width: 500px;
+}
+
+
+
+
+.btn{
+    background: var(--pinky);
+    border: none;
+    border-radius: 13px;
+    padding: 5px 20px;
+    vertical-align: text-bottom;
+    transition: all .3s linear;
+}
+
+    .btn > a{
+        color: white;
+        letter-spacing: -1px;
+    }
+
+    .btn:hover{
+        background: var(--myOrange);
+        transition: all .3s linear;
+    }
+
+   
+.hero-image__background{
+    background: url(images/Polygon\ 1.svg) no-repeat;
+    background-size: 600px auto;
+    background-position-y: 40px;
+    background-position-x: center;
+    display: flex;
+    
+}
+
+.hero-image__background img{
+    position: relative;
+    margin: 0 auto;
+}
+
+.partner-brands{
+    background: var(--myGrey);
+}
+   
+    .brands-container{
+        max-width: max-content;
+        margin-left: 9%;
+    }
+
+    .brand{
+        padding: 20px;
+    }
+
+    
+
+.facebook-chat{
+    position: fixed;
+    right: 15%;
+    top: 675px;
+    background: white;
+    border-radius: 100%;
+    z-index: 99;
+}
+
+.content{
+    margin-top: 60px;
+}
+
+#cards-header{
+    text-align: center;
+    margin: 120px 0;
+}
+
+.card{
+    max-width: 280px;
+    max-height: 350px;
+    border: none;
+    border-radius: 42px;
+    background-color:brown;
+    padding: 2% 3%;
+}
+
+    .card:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 280px;
+        height: 350px;
+        background: turquoise;
+        transform: rotate(0) scale(0.8);
+    
+        float: right;
+        z-index: -1;
+        border-radius: 42px;
+    }
+
+    .card h3, 
+    .card p{
+        margin-bottom: 20px;
+    }
+
+    .btn-card{
+        border-radius: 50px;
+        border: 2px solid black;
+        background: transparent;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        
+    }    
+
+    .btn-card a{
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .card a::after{
+        content: "";
+        display: block;
+        background: url(images/Icons/bi_arrow-right.svg) no-repeat center center;
+        position: relative;
+        float: right;
+        width: 50px;
+        height: 20px;
+        left: 15px;
+        display: flex;
+    }
+
+.card:nth-child(1){
+    background-color: var(--sand);
+    margin-right: 70px;
+}
+        .card:nth-child(1)::after{
+             background-color: var(--shadowSand);
+             animation: shadow-active 1.25s ease-out forwards;
+        }    
+
+.card:nth-child(2){
+    background-color: var(--pinky);
+}
+        .card:nth-child(2)::after{
+            background-color: var(--shadowPinky);
+            animation: shadow-active 1.25s ease-out forwards;
+            animation-delay: .25s;
+        }    
+
+.card:nth-child(3){
+    background-color: var(--pistacchio);
+    margin-left: 70px;
+}
+        .card:nth-child(3)::after{
+            background-color: var(--shadowPistacchio);
+            animation: shadow-active 1.25s ease-out forwards;
+            animation-delay: .5s;
+        }    
+
+@keyframes shadow-active{
+    0%{
+        transform: rotate(0) scale(0.8);
+    }
+
+    100%{
+        transform: rotate(16.94deg) scale(0.8);
+    }
+}
+
+
+.about-app{
+    position: relative;
+}
+
+
+.cards-wrapper{
+    margin-bottom: 120px;
+}
+
+
+.about-app-img-container{
+    justify-content: center;
+    align-items: center;
+}
+
+.about-app-content{
+    margin: 0 auto 0 0;
+}
+
+
+.computer_image{
+    position: relative;
+   
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
+    .about-app-content button{
+        position: relative;
+        margin-left: auto;
+    }
+
+.register-img-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+    .register-img-container>img{
+        
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    .polygon3{
+        position: relative;
+        z-index: -1;
+        margin: auto;
+        transform: scale(0.9);
+
+    }
+
+    .app_admin_img{
+        position: absolute;
+        z-index: 1;
+        margin: auto;
+        transform: scale(0.8);
+    }
+
+footer{
+    background: var(--myBlack);
+    padding: 3rem 0 1.5rem 0;
+    
+}
+
+.footer-nav,
+.footer-nav a,
+.copywright{
+    color: var(--greyFont);
+}
+
+        .footer-nav ul{
+            list-style-type: none;
+            letter-spacing: 1px;
+
+        }
+
+        .footer-nav ul{
+            padding: 0;
+        }
+
+        .footer-nav ul li{
+            margin-bottom: 5px;
+           
+        }
+
+        .nav-category{
+            font-weight: bold;
+            margin-bottom: 15px !important;
+            color: white;
+            font-weight: 12px;
+        }
+
+        .nav-list{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+         
+        }
+
+
+    .copywright{
+        margin-left: auto;
+        font-size: 10px;
+    }
+
+        .copywright span{
+            color: white;
+        }
+
+
+    .form-check-input{
+        display: block;
+        min-width: 10px;
+        min-height: 10px;
+    }
+
+    .form-check-label{
+        font-size: 10px;
+        padding-left: 10px;
+        width: 330px;
+
+    }
+
+
+  .form-wrapper{
+      width: 33%;
+  }
+
+
+    form{
+        min-width: 40%;
+        display: flex;
+        flex-flow: column;
+        position: relative  !important;
+        margin: auto 0 auto auto;
+    }
+
+    .email-wrapper{
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    input[type="email"]{
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 13px;
+        padding: 10px 15px;
+    }
+
+    .btn-form{
+        color: var(--myBlack);
+        background: white;
+        font-weight: bold;
+    }
+
+        .btn-form:hover{
+            background: var(--pinky);
+        }
+
+    

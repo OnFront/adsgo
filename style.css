@@ -152,7 +152,19 @@ header{
       }
 
 
-.main__content-left,
+main{
+    padding: 0 25px;
+}
+
+.content{
+    padding-top: 60px;
+}
+
+.main__content-left{
+    max-width: 520px;
+}
+
+
 .about-app-content,
 .register-content{
     max-width: 500px;
@@ -180,20 +192,25 @@ header{
         transition: all .3s linear;
     }
 
-   
-.hero-image__background{
-    background: url(images/Polygon\ 1.svg) no-repeat;
-    background-size: 600px auto;
-    background-position-y: 40px;
-    background-position-x: center;
-    display: flex;
-    
-}
 
-.hero-image__background img{
+   .polygon1{
     position: relative;
+    z-index: -2;
+    top: 57px;
+    left: 8%;
+    transform: scale(0.7);
+   }
+
+   .girl_image{
+    position: absolute;
     margin: 0 auto;
-}
+    z-index: -1;
+    transform: scale(1);
+  }
+
+ 
+   
+
 
 .partner-brands{
     background: var(--myGrey);
@@ -201,13 +218,24 @@ header{
    
     .brands-container{
         max-width: max-content;
-        margin-left: 9%;
+        margin: 0 auto;
     }
+
 
     .brand{
-        padding: 20px;
+        padding: 20px 10px;
     }
 
+        .brand img{
+            height: 100%;
+            width: 100%;
+        }
+
+    .googleAds-icon{
+        padding-left: 0;
+    }
+
+    
     
 
 .facebook-chat{
@@ -219,9 +247,7 @@ header{
     z-index: 99;
 }
 
-.content{
-    margin-top: 60px;
-}
+
 
 #cards-header{
     text-align: center;
@@ -488,3 +514,61 @@ footer{
         }
 
     
+    @media screen and (min-width: 476px){
+       
+        
+        .polygon1{
+            position: relative;
+            transform: scale(0.9);
+            z-index: -2;
+            top: 57px;
+            left: unset;
+        
+          }
+        
+          .girl_image{
+            position: absolute;
+            margin: 0 auto;
+            z-index: -1;
+            transform: scale(1.2);
+          }
+
+          .brand{
+              padding: 20px;
+          }
+    }
+
+
+    @media screen and (min-width: 576px){
+        .polygon1{
+            position: relative;
+            transform: scale(1.1);
+            z-index: -2;
+            top: 57px;
+            left: unset;
+        
+          }
+        
+          .girl_image{
+            position: absolute;
+            margin: 0 auto;
+            z-index: -1;
+            transform: scale(1.2);
+          }
+
+       
+    }
+
+
+    @media screen and (min-width: 768px){
+        .content{
+            padding-top: unset;
+
+        }
+
+        .brands-container{
+            max-width: max-content;
+            margin-left: 9%;
+        }
+    
+    }

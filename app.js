@@ -62,7 +62,7 @@ gsap.to(".girl_image", {
    scrollTrigger: {
      trigger: ".card",
      start: "20% 20%",
-     markers: true
+    
    }
  });
 

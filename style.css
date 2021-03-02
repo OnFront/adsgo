@@ -43,6 +43,10 @@
     
 }
 
+/* #h1{
+    opacity: 0;
+} */
+
 
 p, a, li{
     font-family: 'Roboto', sans-serif; 
@@ -93,7 +97,6 @@ p{
 
 
 
-
 header{
     margin-top: 25px;
 }
@@ -106,7 +109,8 @@ header{
 
 .navbar{
     height: 40px;
-    
+    background: white;
+    z-index: 99;
 }
 
 
@@ -179,7 +183,8 @@ main{
     border-radius: 13px;
     padding: 5px 20px;
     vertical-align: text-bottom;
-    transition: all .3s linear;
+    transition: background .3s linear;
+    
 }
 
     .btn > a{
@@ -189,7 +194,7 @@ main{
 
     .btn:hover{
         background: var(--myOrange);
-        transition: all .3s linear;
+        transition: background .3s linear;
     }
 
 
